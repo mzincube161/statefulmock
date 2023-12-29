@@ -1,0 +1,15 @@
+{
+  "name": "statefulmock",
+  "version": "1.0.0",
+  "description": "State full mocking",
+  "main": "src/index.js",
+  "scripts": {
+    "test": "test"
+  },
+  "keywords": [
+    "stefulmock",
+    "mocks"
+  ],
+  "author": "Mzimkhulu Ncube",
+  "license": "ISC"
+}
