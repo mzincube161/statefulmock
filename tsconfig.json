@@ -1,0 +1,16 @@
+{
+  "compilerOptions": {
+    "target": "ESNext",
+    "experimentalDecorators": true,
+    "emitDecoratorMetadata": true,
+    "removeComments": true,
+    "esModuleInterop": true,
+    "strictNullChecks": false,
+    "types": ["node", "jest"],
+    "module": "commonjs",
+    "lib": ["es2017", "es7", "es6", "dom"],
+    "declaration": true,
+    "outDir": "dist"
+  },
+  "exclude": ["node_modules", "test", "dist", "**/*spec.ts"]
+}
