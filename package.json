@@ -1,7 +1,7 @@
 {
   "name": "statefulmock",
   "version": "1.0.0",
-  "description": "State full mocking",
+  "description": "Stateful mocking capability",
   "private": false,
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
@@ -21,8 +21,10 @@
     "test:watch": "jest --watch"
   },
   "keywords": [
-    "stefulmock",
-    "mocks"
+    "statefulmock",
+    "mocks",
+    "stateful mocking",
+    "mocking"
   ],
   "author": "Mzimkhulu Ncube",
   "license": "MIT",
