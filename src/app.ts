@@ -25,7 +25,7 @@ export class StatefulMock {
 
   public setMockData(data: TMockData): StatefulMock {
     LoggerService.getLogger().debug('Sending mock data to path matcher service');
-    this.pathMatcher.setMockData(data)
+    this.pathMatcher.setMockData(data);
     LoggerService.getLogger().debug('Sent mock data to path matcher service');
     return this;
   }
