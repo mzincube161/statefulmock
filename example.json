@@ -1,0 +1,57 @@
+{
+  "paths": [
+    {
+      "match": "/api/v1/payin/{id}",
+      "databaseResourceId": "${path.id}",
+      "validators": [
+        {
+          "operand": "and",
+          "rules": [
+            {
+              "field": "${header.clientId}",
+              "operator": "==",
+              "value": "${database.data.clientId}"
+            }
+          ],
+          "errorResponse": {
+            "statusCode": 400,
+            "headers": {},
+            "body": {}
+          }
+        }
+      ],
+      "syncResponse": {
+        "statusCode": 200,
+        "headers": {},
+        "body": {
+          "id": "${functions.randomUUID, 4}",
+          "status": "${database.data.status}",
+          "createdAt": "${database.data.createdAt}"
+        },
+        "proxy": {
+          "enabled": true,
+          "proxyHost": "",
+          "path": "",
+          "extraHeaders": {}
+        }
+      },
+      "asyncResponse": {
+        "config": {
+          "delay": 1000,
+          "asyncType": "SQS | KAFKA | URL"
+        },
+        "url": "",
+        "body": {}
+      },
+      "persistence": {
+        "override": false,
+        "persistenceType": "LOCAL",
+        "dynamoDbTable": "",
+        "data": {
+          "id": "${syncResponse.body.id}",
+          "status": "ACTIVE"
+        }
+      }
+    }
+  ]
+}
