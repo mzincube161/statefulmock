@@ -1,3 +1,14 @@
+# Stateful mock package (Coming soon)
+
+### Description
+
+This Node.js package will allow you to run stateful mocks that act as a real server. When a request is sent you can choose to persist that data and fetch it 
+later on to rehydrate a response
+
+You can validate data and send back error responses to the users
+
+### Example json
+```json
 {
   "paths": [
     {
@@ -64,3 +75,4 @@
     }
   ]
 }
+```
