@@ -23,7 +23,7 @@
       "syncResponse": {
         "statusCode": 200,
         "headers": {},
-        "body": {
+        "jsonBody": {
           "id": "${functions.randomUUID, 4}",
           "status": "${database.data.status}",
           "createdAt": "${database.data.createdAt}"
