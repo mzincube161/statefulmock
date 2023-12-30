@@ -1,5 +1,5 @@
 {
-  "name": "statefulmock",
+  "name": "@statefulmocking/standalone-server",
   "version": "1.0.0",
   "description": "Stateful mocking capability",
   "private": false,
